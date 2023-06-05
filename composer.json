@@ -1,0 +1,25 @@
+{
+    "name": "iamthiagoo/capputeeno-store",
+    "description": "A PHP project that uses Rocketseat's React project as a base",
+    "require": {
+        "robmorgan/phinx": "^0.13.4",
+        "phpmailer/phpmailer": "^6.8",
+        "symfony/var-dumper": "^6.3",
+        "vlucas/phpdotenv": "^5.5",
+        "fakerphp/faker": "^1.22"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Iamthiagoo\\CapputeenoStore\\": "src/",
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thiago Ferreira",
+            "email": "devthiagoferreira@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
