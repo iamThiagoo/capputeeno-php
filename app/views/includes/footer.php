@@ -1,4 +1,4 @@
-<footer class="px-4 py-12 bg-linear-pink-invert">
+<footer class="px-4 py-4 bg-linear-pink-invert">
     <div tabindex="0" aria-label="footer" class="container flex flex-col items-center justify-center mx-auto focus:outline-none">
         <div tabindex="0" aria-label="prodify logo" role="img">
             <h3 class="mt-2 text-5xl logo"> capputeeno </h3>

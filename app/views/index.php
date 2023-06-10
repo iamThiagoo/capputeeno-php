@@ -10,8 +10,10 @@
     <body>
         <?php include_once("includes/menu.php"); ?>       
     
-        <main class="main-content">
-            <?php include_once($viewPath . $view) ?>
+        <main class="bg-[#F0F0F5]">
+            <div class="p-6 px-8 mx-auto max-w-7xl">
+                <?php include_once($viewPath . $view) ?>
+            </div>
         </main>
         
         <?php include_once('includes/footer.php'); ?>
