@@ -1,3 +1,23 @@
+/* Saira Stencil One */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
+/* Saira */
+@import url('https://fonts.googleapis.com/css2?family=Saira&family=Saira+Stencil+One&display=swap');
+
+/* TailwindCSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Classes */
+
+* {
+    font-family: 'Saira', cursive;
+    color: #5D5D6D;
+}
+
+.logo {
+    font-family: 'Saira Stencil One', cursive;
+    color: #5D5D6D;
+    font-weight: 400;
+}

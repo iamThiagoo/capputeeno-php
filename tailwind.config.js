@@ -3,6 +3,7 @@
 module.exports = {
 	content: [
 		'./app/views/*.php',
+		'./app/views/includes/*.php',
 	],
 	theme: {
 		mode: 'jit',
