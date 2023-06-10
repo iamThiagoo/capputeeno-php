@@ -5,10 +5,16 @@ namespace app\controllers;
 class HomeController
 {
     
+    public array $data = [];
+    public string $view;
+
     //
     public function index ()
     {
-
+        $this->data = [
+            'view' => 'home.php',
+            'title' => 'Capputeeno - Página Inicial',
+        ];
     }
 
     //

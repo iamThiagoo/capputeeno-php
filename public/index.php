@@ -13,6 +13,14 @@ try
 
     $loadedController->$method();
 
+    if($_SERVER['REQUEST_METHOD'] == 'GET') {
+
+        $viewPath = "../app/views/";
+
+        extract($loadedController->data);
+        require '../app/views/index.php';
+    }
+
 } catch (\Exception $e)
 {
     dd($e->getMessage());
