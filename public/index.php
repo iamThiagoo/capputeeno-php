@@ -3,6 +3,7 @@
 require_once '../bootstrap.php';
 
 use app\controllers\Controller;
+use app\classes\Connection;
 
 try 
 {

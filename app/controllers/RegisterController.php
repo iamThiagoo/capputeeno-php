@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-class HomeController
+class RegisterController
 {
     
     public array $data = [];
@@ -12,8 +12,8 @@ class HomeController
     public function index ()
     {
         $this->data = [
-            'view' => 'home.php',
-            'title' => 'Página Inicial - Capputeeno',
+            'view' => 'register.php',
+            'title' => 'Cadastro - Capputeeno',
         ];
     }
 

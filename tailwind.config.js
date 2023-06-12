@@ -9,5 +9,7 @@ module.exports = {
 		mode: 'jit',
 		extend: {},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/forms')
+	],
 }
