@@ -21,6 +21,7 @@
         
         <?php include_once('includes/footer.php'); ?>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.6.3/imask.min.js" integrity="sha512-3vp+LSISGvb6zv5d6RecQhprTO+d+Uuildi4lf5gjXXmcaLA9yfYijxdngQasl+YQMlrmFluqwbueVPcDducdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="/assets/js/app.js"></script>
     </body>
 </html>

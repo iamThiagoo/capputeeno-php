@@ -12,7 +12,7 @@
     </ul>
     
     <div>
-        <select class="bg-transparent outline-none">
+        <select class="bg-transparent border-none outline-none">
             <option>Organizar por</option>
             <option>Novidades</option>
             <option>Preço: Maior - menor</option>

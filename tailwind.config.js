@@ -4,6 +4,7 @@ module.exports = {
 	content: [
 		'./app/views/*.php',
 		'./app/views/includes/*.php',
+		'./public/assets/js/*.js',
 	],
 	theme: {
 		mode: 'jit',

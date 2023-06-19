@@ -7,5 +7,8 @@
   },
   "scripts": {
     "dev": "npx tailwindcss -i ./public/assets/css/app.css -o ./public/assets/css/main.css --watch"
+  },
+  "dependencies": {
+    "imask": "^6.6.3"
   }
 }

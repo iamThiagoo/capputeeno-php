@@ -8,7 +8,7 @@
 
         <div class="items-center justify-end hidden gap-6 lg:flex lg:flex-1">
             <form action="" method="" class="bg-[#F3F5F6] flex items-center justify-between gap-5 p-2.5 px-4 rounded-lg w-80 h-10">
-                <input type="text" class="w-11/12 text-sm bg-transparent outline-none" placeholder="Procurando por algo específico?" />
+                <input type="text" class="w-11/12 text-sm bg-transparent border-none outline-none" placeholder="Procurando por algo específico?" />
                 <button type="submit">
                     <img src="/assets/images/search-loupe.svg" />
                 </button>

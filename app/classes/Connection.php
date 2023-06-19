@@ -5,9 +5,9 @@ namespace app\classes;
 use PDO;
 use PDOException;
 
-final class Connection 
+final class Connection
 {
-    protected static $pdo;
+    protected $pdo;
 
     public function __construct()
     {
@@ -15,11 +15,9 @@ final class Connection
         {
             $configs = self::getConnectionConfigs();
 
-            self::$pdo = new PDO("{$configs['DB_DRIVER']}:host={$configs['DB_HOST']}; port={$configs['DB_PORT']}; dbname={$configs['DB_DATABASE']}", $configs['DB_USER'], $configs['DB_PASS']);
-            self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            self::$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-
-            return self::$pdo;
+            $this->pdo = new PDO("{$configs['DB_DRIVER']}:host={$configs['DB_HOST']}; port={$configs['DB_PORT']}; dbname={$configs['DB_DATABASE']}", $configs['DB_USER'], $configs['DB_PASS']);
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
         } catch (PDOException $e) {
             die("Connection error => {$e->getMessage()}");
@@ -59,5 +57,52 @@ final class Connection
             'DB_USER' => $_ENV['DB_USER'],
             'DB_PASS' => $_ENV['DB_PASS']
         ];
+    }
+
+
+    public function CloseConnection()
+    {
+        $this->pdo = null;
+    }
+
+
+    public function prepare($sql)
+    {
+        return $this->pdo->prepare($sql);
+    }
+
+
+    public function bindValue($parameter, $value, $dataType = PDO::PARAM_STR)
+    {
+        return $this->pdo->bindValue($parameter, $value, $dataType);
+    }
+
+
+    public function query($sql, $params = [])
+    {
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($params);
+            return $statement;
+        } catch (PDOException $e) {
+            die("Query error => {$e->getMessage()}");
+        }
+    }
+
+
+    public function execute($sql, $params = [])
+    {
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($params);
+            return $statement->rowCount();
+        } catch (PDOException $e) {
+            die("Execute error => {$e->getMessage()}");
+        }
+    }
+
+    
+    public function lastInsertId() {
+        return $this->pdo->lastInsertId();
     }
 }
